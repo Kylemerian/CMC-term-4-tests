@@ -20,26 +20,26 @@ badAdditionб в объекте которого должны содержать
 В результате следующая функция main () :  
   
 <code>
-int main() {  
-    try{  
-        intRectangle a(3, 5), b(5, 7), c(11, 4), d(6, 11);  
-        intRectangle p, q;  
-        p = a + b;  
-        q = c + d;  
-        printf("%d\n", (p+q).measure());  
-        printf("%d\n", (q+a).measure());  
-    }  
-    catch(const badAddition & bad){  
-        printf("Bad addition: (%d*%d) + (%d*%d)\n",  
-            bad.getX1(), bad.getY1(), bad.getX2(), bad.getY2());  
-    }  
-    return 0;  
-}  
+int main() { <br> 
+    try{  <br>
+        intRectangle a(3, 5), b(5, 7), c(11, 4), d(6, 11);  <br>
+        intRectangle p, q;  <br>
+        p = a + b;  <br>
+        q = c + d;  <br>
+        printf("%d\n", (p+q).measure());  <br>
+        printf("%d\n", (q+a).measure());  <br>
+    }  <br>
+    catch(const badAddition & bad){  <br>
+        printf("Bad addition: (%d*%d) + (%d*%d)\n",  <br>
+            bad.getX1(), bad.getY1(), bad.getX2(), bad.getY2()); <br> 
+    }  <br>
+    return 0;  <br>
+}  <br>
 <code>
 
 должна откомпилироваться без ошибок, предупреждений, отработать и выдать :  
   
-160  
+160  <br>
 Bad addition: (11х10)+(3х5)  
   
 <strong>Все поля должны быть в закрытой (private) части базового класса, открытыми и защищёнными могут быть только
@@ -72,28 +72,28 @@ virtual int Measure() const;
 В результате следующая функция main():  
 
 <code>
-int main()  
-{  
-    try{  
-        segment f(1, 2), g(0.5, 5), h(2.5, 6.5);  
-        printf("%3.3f, %3.3f, %3.3f\n",  
-            (f+g).measure(), (g+h).measure(), (f+g+h).measure());  
-        printf("%3.3f\n", (f+h).measure());  
-    }  
-    catch(const badAddition & bad){  
-        printf("Bad addition: [%3.3f; %3.3f] + [%3.3f; %3.3f]\n",  
-            bad.getA1(), bad.getB1(), bad.getA2(), bad.getB2());  
-    }  
-    catch(badSegment b){  
-        printf("Bad segment\n");  
-    }  
-    return 0;  
-}  
+int main()  <br>
+{  <br>
+    try{  <br>
+        segment f(1, 2), g(0.5, 5), h(2.5, 6.5); <br> 
+        printf("%3.3f, %3.3f, %3.3f\n",  <br>
+            (f+g).measure(), (g+h).measure(), (f+g+h).measure());  <br>
+        printf("%3.3f\n", (f+h).measure());  <br>
+    }  <br>
+    catch(const badAddition & bad){  <br>
+        printf("Bad addition: [%3.3f; %3.3f] + [%3.3f; %3.3f]\n", <br> 
+            bad.getA1(), bad.getB1(), bad.getA2(), bad.getB2()); <br> 
+    }  <br>
+    catch(badSegment b){  <br>
+        printf("Bad segment\n");  <br>
+    }  <br>
+    return 0;  <br>
+}  <br>
 <code>
 
 должна откомпилироваться без ошибок и предупреждений, отработать и выдать  
   
-4.500, 6.000, 6.000  
+4.500, 6.000, 6.000  <br>
 BadAddition: [1.000; 2.000]+[2.500; 6.500]  
   
 <strong> Все поля должны быть в закрытой (private) части базового класса, открытыми и защищёнными 
