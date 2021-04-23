@@ -64,6 +64,9 @@ void syntaxer::R()
     if(chr == '*'){
         setChar();
         S();
+        if(chr != ')')
+            throw "Expected )";
+        setChar();
     }
     else if(chr == '('){
         setChar();
