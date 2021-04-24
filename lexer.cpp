@@ -23,7 +23,7 @@ class lexer
     void Error() {};
 public:
     int isCorrect() const{
-        return status == S || status == H;
+        return status == S;
     }
     void setChar(int c); 
     lexer(){
