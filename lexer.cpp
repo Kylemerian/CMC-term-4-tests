@@ -73,7 +73,7 @@ void lexer::Cc()
         status = A;
     else if(chr == '>')
         status = B;
-    else
+    else if(!(chr == '=' || chr == '-'))
         status = ERR;
 }
 
