@@ -98,7 +98,7 @@ void syntaxer::start()
 {
     setChar();
     if(chr == EOF)
-        return;
+        throw "Empty sequence";
     S();
     if(chr != EOF)
         throw "Expected EOF";
