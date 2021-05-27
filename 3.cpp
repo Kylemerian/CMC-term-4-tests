@@ -40,3 +40,7 @@ int main()
     printf("volumes: %3.3f %3.3f %3.3f\n",p->volume(), q->volume(), r->volume());
     return 0;
 }
+/* output
+squares: 1.000 4.000 9.000
+volumes: 2.000 4.000 27.000
+*/
